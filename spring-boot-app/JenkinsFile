@@ -27,7 +27,7 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "dockeruser2068/jenkins:tagname:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "dockeruser2068/jenkins:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
